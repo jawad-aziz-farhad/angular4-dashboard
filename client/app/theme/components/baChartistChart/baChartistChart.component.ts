@@ -4,7 +4,10 @@ import {
     Input,
     Output,
     ElementRef,
-    EventEmitter
+    EventEmitter,
+    AfterViewInit,
+    OnChanges ,
+    OnDestroy
 } from '@angular/core';
 
 import * as Chartist from 'chartist';
@@ -14,16 +17,16 @@ import * as Chartist from 'chartist';
   templateUrl: './baChartistChart.html',
   providers: [],
 })
-export class BaChartistChart {
+export class BaChartistChart implements AfterViewInit , OnChanges , OnDestroy {
 
-  @Input() baChartistChartType:string;
-  @Input() baChartistChartData:Object;
-  @Input() baChartistChartOptions:Object;
-  @Input() baChartistChartResponsive:Object;
-  @Input() baChartistChartClass:string;
+  @Input() baChartistChartType: string;
+  @Input() baChartistChartData: Object;
+  @Input() baChartistChartOptions: Object;
+  @Input() baChartistChartResponsive: Object;
+  @Input() baChartistChartClass: string;
   @Output() onChartReady = new EventEmitter<any>();
 
-  @ViewChild('baChartistChart') public _selector: ElementRef;
+  @ViewChild('baChartistChart') _selector: ElementRef;
 
   private chart;
 

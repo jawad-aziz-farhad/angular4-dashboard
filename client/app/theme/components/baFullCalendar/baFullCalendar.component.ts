@@ -1,12 +1,12 @@
-import {Component, ViewChild, Input, Output, ElementRef, EventEmitter} from '@angular/core';
+import { Component, ViewChild, Input, Output, ElementRef, EventEmitter , AfterViewInit } from '@angular/core';
 import 'fullcalendar/dist/fullcalendar.js';
 import * as jQuery from 'jquery';
 
 @Component({
-  selector: 'ba-full-calendar',
-  templateUrl: './baFullCalendar.html'
+  selector: `ba-full-calendar` ,
+  templateUrl: `./baFullCalendar.html`
 })
-export class BaFullCalendar {
+export class BaFullCalendar implements AfterViewInit {
 
   @Input() baFullCalendarConfiguration:Object;
   @Input() baFullCalendarClass:string;

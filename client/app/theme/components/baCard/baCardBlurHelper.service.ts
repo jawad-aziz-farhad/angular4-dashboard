@@ -14,7 +14,7 @@ export class BaCardBlurHelper {
     this._genImageLoadSubject();
   }
 
-  public bodyBgLoad():Subject<void> {
+  public bodyBgLoad(): Subject<void> {
     return this.imageLoadSubject;
   }
 
@@ -38,7 +38,7 @@ export class BaCardBlurHelper {
 
   private _genBgImage():void {
     this.image = new Image();
-    let computedStyle = getComputedStyle(document.body.querySelector('main'), ':before');
+    const computedStyle = getComputedStyle(document.body.querySelector('main'), ':before');
     this.image.src = computedStyle.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2');
   }
 

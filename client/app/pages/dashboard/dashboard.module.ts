@@ -15,6 +15,8 @@ import { LineChart } from './lineChart';
 import { Feed } from './feed';
 import { Todo } from './todo';
 import { Calendar } from './calendar';
+
+/* SERVICES */
 import { CalendarService } from './calendar/calendar.service';
 import { FeedService } from './feed/feed.service';
 import { LineChartService } from './lineChart/lineChart.service';
